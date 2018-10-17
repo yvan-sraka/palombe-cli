@@ -1,7 +1,9 @@
 [package]
-name = "Palombe"
+name = "palombe"
 version = "0.1.0"
 authors = ["Yvan Sraka <yvan@sraka.pw>"]
 edition = "2018"
 
 [dependencies]
+clap = "2.32.0"
+palombe = "0.2.0"
