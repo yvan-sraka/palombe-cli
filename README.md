@@ -2,6 +2,14 @@
 
 Palombe lets you send and receive messages synchronously through different processes using named pipes.
 
+```shell
+palombe send foo bar
+```
+
+```shell
+palombe receive foo # bar
+```
+
 ## Aknowlegments
 
 :warning: This tool is not suited for building soytware, it is intend to be use only in rapid prototyping and first product development steps!
@@ -10,7 +18,7 @@ If you looking for a better / faster / saffer way to share typed (yes you want t
 
 ## Supported environments
 
-The module is available on several environments:
+The tool is embed into modules targeting several environments:
 
 - ECMAScript: [npm](https://www.npmjs.com/package/palombe) | [Yarn](https://yarnpkg.com/fr/package/palombe) ([_Sources_](https://github.com/yvan-sraka/palombe-node))
 - Python: [PyPI](https://pypi.org/project/palombe/) ([_Sources_](https://github.com/yvan-sraka/palombe-python))
@@ -23,7 +31,7 @@ Please read [CONTRIBUTING.md](https://github.com/yvan-sraka/Palombe/blob/master/
 
 ## Authors
 
-* [Yvan Sraka](https://github.com/yvan-sraka)
+- [Yvan Sraka](https://github.com/yvan-sraka)
 
 See also the list of [contributors](https://github.com/yvan-sraka/Palombe/graphs/contributors) who participated in this project.
 
