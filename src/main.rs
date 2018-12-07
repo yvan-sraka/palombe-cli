@@ -1,7 +1,7 @@
 extern crate palombe;
 
 extern crate clap;
-use clap::{Arg, App, SubCommand};
+use clap::{App, Arg, SubCommand};
 
 fn main() {
     let matches = App::new("Palombe")
