@@ -20,9 +20,10 @@ Aknowlegments
 :warning: This tool is not suited for building soytware, it is intend to
 be use only in rapid prototyping and first product development steps!
 
-If you looking for a better / faster / saffer way to share typed (yes
-you want that) data across different processes, take a look at [GoogleProtocal Buffer](https://developers.google.com/protocol-buffers/) or
-even better at [Cap’n Proto](https://capnproto.org/) (which is
+If you looking for a better / faster / saffer way to share typed (yes you
+want that) data across different processes, take a look at
+[Google Protocol Buffer](https://developers.google.com/protocol-buffers/)
+or even better at [Cap’n Proto](https://capnproto.org/) (which is
 infinitely faster).
 
 Supported environments

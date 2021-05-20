@@ -52,14 +52,14 @@ name = "palombe"
 version = "0.4.0"
 dependencies = [
  "clap",
- "palombe 0.4.1",
+ "palombe 0.5.0",
 ]
 
 [[package]]
 name = "palombe"
-version = "0.4.1"
+version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b1dfd0c8aac87cdca0f3090d3ab9b46be22bbe2b745fc3d257c7ce1be5cead2c"
+checksum = "d861c528ec2aa062d65df5dddf67de2cc1838c76b9937b776600221b7a20145c"
 dependencies = [
  "libc",
 ]

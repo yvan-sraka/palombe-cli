@@ -18,10 +18,10 @@
 //! :warning: This tool is not suited for building soytware, it is intend to
 //! be use only in rapid prototyping and first product development steps!
 //!
-//! If you looking for a better / faster / saffer way to share typed (yes
-//! you want that) data across different processes, take a look at [Google
-//! Protocal Buffer](https://developers.google.com/protocol-buffers/) or
-//! even better at [Cap'n Proto](https://capnproto.org/) (which is
+//! If you looking for a better / faster / saffer way to share typed (yes you
+//! want that) data across different processes, take a look at
+//! [Google Protocol Buffer](https://developers.google.com/protocol-buffers/)
+//! or even better at [Cap’n Proto](https://capnproto.org/) (which is
 //! infinitely faster).
 //!
 //! Supported environments
@@ -31,13 +31,13 @@
 //!
 //! -   ECMAScript: [npm](https://www.npmjs.com/package/palombe) \|
 //!     [Yarn](https://yarnpkg.com/fr/package/palombe)
-//!     ([*Sources*](https://github.com/yvan-sraka/palombe-node))
+//!     ([Sources](https://github.com/yvan-sraka/palombe-node))
 //! -   Python: [PyPI](https://pypi.org/project/palombe/)
-//!     ([*Sources*](https://github.com/yvan-sraka/palombe-python))
+//!     ([Sources](https://github.com/yvan-sraka/palombe-python))
 //! -   Ruby: [RubyGem.org](https://rubygems.org/gems/palombe)
-//!     ([*Sources*](https://github.com/yvan-sraka/palombe-ruby))
+//!     ([Sources](https://github.com/yvan-sraka/palombe-ruby))
 //! -   Rust: [Crates.io](https://crates.io/crates/palombe)
-//!     ([*Sources*](https://github.com/yvan-sraka/palombe-rust))
+//!     ([Sources](https://github.com/yvan-sraka/palombe-rust))
 //!
 //! Contributing
 //! ------------
@@ -68,12 +68,10 @@ extern crate palombe;
 extern crate clap;
 use clap::{App, Arg, SubCommand};
 
-use std::ffi::CString;
-
 fn main() {
     let matches = App::new("Palombe")
         .version("0.1.0")
-        .author("Yvan Sraka <yvan@sraka.pw>")
+        .author("Yvan Sraka <yvan@sraka.xyz>")
         .about("Palombe lets you send and receive messages synchronously through different processes using named pipes")
         .subcommand(SubCommand::with_name("send")
             .about("Send a message")
@@ -94,12 +92,12 @@ fn main() {
         .get_matches();
 
     if let Some(matches) = matches.subcommand_matches("send") {
-        let key = CString::new(matches.value_of("KEY").unwrap()).unwrap();
-        let value = CString::new(matches.value_of("VALUE").unwrap()).unwrap();
-        palombe::send(&key, &value);
+        let key = matches.value_of("KEY").unwrap();
+        let value = matches.value_of("VALUE").unwrap();
+        palombe::send(key, value);
     }
     if let Some(matches) = matches.subcommand_matches("receive") {
-        let key = CString::new(matches.value_of("KEY").unwrap()).unwrap();
-        print!("{}", palombe::receive(&key).into_string().unwrap());
+        let key = matches.value_of("KEY").unwrap();
+        print!("{}", palombe::receive(key));
     }
 }
